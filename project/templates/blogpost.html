@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5" id="post-container">
+  <div class="d-flex justify-content-center">
+    <div class="blog-post-card border-0" style="max-width: 600px">
+      <h3>{{ blogpost.title }}</h3>
+      <h5>{{ blogpost.subtitle }}</h5>
+      <br />
+      <img
+        class="img-fluid"
+        src="{{ blogpost.image }}"
+        alt="Responsive image"
+        id="img-max"
+      />
+      <br />
+      <p class="card-body-text">{{ blogpost.content }}</p>
+      <p class="card-byline text-muted font-italic">
+        Posted by {{ blogpost.author }} on {{ blogpost.date_posted.strftime('%B
+        %d, %Y') }}
+      </p>
+
+      <div class="nav justify-content-start">
+        <a
+          class="btn btn-outline-primary"
+          href="{{ url_for ('main.index')}}"
+          role="button"
+          id="blogpost-homelink"
+          >Archive</a
+        >
+
+        {% if current_user.is_authenticated %}
+        <a
+          href="{{ url_for('auth.edit_post', blogpost_id=blogpost.id)}}"
+          class="btn btn-outline-danger"
+          role="button"
+          >Edit</a
+        >
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% endblock %}
+</div>

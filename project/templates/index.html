@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    {% for blogpost in blogposts %}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card mt-2">
+        <img
+          class="img-fluid"
+          src="{{ blogpost.image }}"
+          alt="Responsive image"
+        />
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{{ url_for('main.blogpost', blogpost_id=blogpost.id)}}">
+              {{ blogpost.title }}
+            </a>
+          </h5>
+
+          <p>{{ blogpost.content | truncate(200) }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

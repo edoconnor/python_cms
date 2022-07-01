@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="width: 100%">{% block title %} {% endblock %}</h1>
+<div class="container mt-5 d-flex justify-content-center ">
+    <div class="login-card">   
+  <h1>Admin Login</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %} 
+  {% if messages %}
+      {% for category, message in messages %} 
+      {% if category == 'success' %}
+          <div class="alert alert-success w50" role="alert">
+              {{ message }}
+          </div>
+      {% endif %} 
+
+      {% if category == 'error' %}
+          <div class="alert alert-danger w50" role="alert">
+           {{ message }}
+          </div>
+      {% endif %} 
+      {% endfor %} 
+      {% endif %} 
+      {% endwith %} 
+
+  <form method="post">
+    <div class="col-md-12">
+      <label for="email" class="form-label mt-3">Email</label>
+      <input type="email" class="form-control" name="email"
+                  placeholder="Email">
+                  </input>
+    </div>
+    <div class="col-md-12">
+      <label for="password" class="form-label mt-3">Password</label>
+      <input type="password" class="form-control" name="password"
+                  placeholder="Password">
+                  </input>
+    </div>
+    <br>
+    <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" name="remember" />
+          Remember me
+        </label>
+      </div>
+    <BR>
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+{% endblock %}
+

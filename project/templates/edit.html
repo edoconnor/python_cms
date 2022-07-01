@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="width: 100%">{% block title %} {% endblock %}</h1>
+<div class="container mt-5">
+  
+  <h1>Edit Post # {{ blogpost.id }}</h1>
+
+  <form method="post">
+    <div class="col-md-12">
+      <label for="title" class="form-label mt-3">Title</label>
+      <input type="text" class="form-control" name="title"
+              value="{{ blogpost.title }}" 
+                  placeholder="Title">
+                  </input>
+    </div>
+
+    <!-- <div class="col-md-12">
+      <label for="subtitle" class="form-label mt-3">Subtitle</label>
+      <input type="text" class="form-control" name="subtitle"
+                  value="{{ blogpost.subtitle }}"
+                  placeholder="Subtitle">
+                  </input>
+    </div> -->
+
+    <div class="col-md-12">
+      <label for="subtitle" class="form-label mt-3">Subtitle</label>
+      <input type="text" class="form-control" name="subtitle"
+                  value="{{ blogpost.subtitle }}"
+                  placeholder="Subtitle">
+                  </input>
+    </div>
+    <div class="col-md-12">
+      <label for="author" class="form-label mt-3">Author</label>
+      <input type="text" class="form-control" name="author"
+                  value="{{ blogpost.author }}"
+                  placeholder="Author">
+                  </input>
+    </div>
+    <div class="col-md-12">
+      <label for="image" class="form-label mt-3">Image</label>
+      <input type="text" class="form-control" name="image"
+                  value="{{ blogpost.image }}"
+                  placeholder="Image">
+                  </input>
+    </div>
+    <div class="col-md-12">
+      <label for="content" class="form-label mt-3">Content</label>
+      <textarea rows="5" class="form-control" name="content">
+      {{  blogpost.content  }} 
+    </textarea>
+    </div>
+    <BR>
+    <div class="col-md-12">
+      <button type="submit" class="btn btn-outline-danger">Submit</button>
+    </div>
+  </form>
+  <hr/>
+  <div class="col-md-12">
+    <form
+        method="POST"
+        action="{{ url_for('auth.delete', blogpost_id=blogpost.id) }}"
+      >
+      <input class="btn btn-outline-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this post?')"
+      />
+</div>
+{% endblock %}

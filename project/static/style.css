@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #2d3436;
+}
+
+h1 {
+  margin-left: 1.25rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+a.navbar-brand {
+  letter-spacing: 0.3rem;
+}
+
+.card {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+p.card-body-text {
+  padding-top: 15px;
+}
+
+.field {
+  padding-left: 1.25rem;
+}
+
+.login-card,
+.profile-card {
+  max-width: 500px;
+  width: 75vw;
+}
+
+.alert {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.profile-container {
+  min-height: 50vh;
+}
+
+.profile-link {
+  margin-top: 2rem;
+}
+
+#blogpost-homelink {
+  margin-right: 0.75rem;
+}
+
+#img-max {
+  margin-top: -0.5rem;
+}
+
+.form-control {
+  color: red;
+}

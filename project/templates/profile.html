@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="profile-container d-flex justify-content-center align-items-center">
+  <div class="profile-card mx-auto">
+    <h3 class="text-center">Welcome, {{ name }}!</h3>
+
+    <br />
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+
+    <div class="alert alert-success w50 text-center" role="alert">
+      {{ messages [0] }} Create a new post
+      <a href="{{ url_for('auth.create') }}">here</a>.
+    </div>
+    {% endif %} {% endwith %}
+
+    <div class="profile-link nav justify-content-center">
+      <a
+        class="btn btn-outline-primary"
+        href="{{ url_for ('main.index')}}"
+        role="button"
+        id="blogpost-homelink"
+        >Read Archive</a
+      >
+    </div>
+  </div>
+
+  {% endblock %}
+</div>
