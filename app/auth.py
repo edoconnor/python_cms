@@ -95,7 +95,7 @@ def create_post():
     db.session.add(blogpost)
     db.session.commit()
 
-    return redirect(url_for('main.index'))
+    return redirect(url_for('app.index'))
 
 
 @auth.route('/edit/<int:blogpost_id>/', methods=('GET', 'POST'))
@@ -119,7 +119,7 @@ def edit_post(blogpost_id):
         db.session.add(blogpost)
         db.session.commit()
 
-        return redirect(url_for("main.index"))
+        return redirect(url_for("app.index"))
 
     return render_template('edit.html', blogpost=blogpost)
 
@@ -130,11 +130,11 @@ def delete(blogpost_id):
     blogpost = Blogpost.query.get_or_404(blogpost_id)
     db.session.delete(blogpost)
     db.session.commit()
-    return redirect(url_for("main.index"))
+    return redirect(url_for("app.index"))
 
 
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('main.index'))
+    return redirect(url_for('app.index'))
