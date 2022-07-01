@@ -40,10 +40,8 @@
         <span class="navbar-toggler-icon"></span>
       </button> -->
 
-      <a class="navbar-brand" href="{{ url_for('app.index') }}"
-        >RANDOM THINGS</a
-      >
-      <a class="navbar-brand" href="{{ url_for('auth.login') }}">🚀</a>
+      <a class="navbar-brand" href="{{ url_for('index') }}">RANDOM THINGS</a>
+      <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
 
       {% if current_user.is_authenticated %}
 
@@ -62,15 +60,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('auth.create') }}"
-              >Create Post</a
-            >
+            <a class="nav-link" href="{{ url_for('create') }}">Create Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('auth.profile') }}">Profile</a>
+            <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
           </li>
           {% endif %}
         </ul>

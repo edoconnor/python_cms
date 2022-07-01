@@ -13,15 +13,6 @@
                   placeholder="Title">
                   </input>
     </div>
-
-    <!-- <div class="col-md-12">
-      <label for="subtitle" class="form-label mt-3">Subtitle</label>
-      <input type="text" class="form-control" name="subtitle"
-                  value="{{ blogpost.subtitle }}"
-                  placeholder="Subtitle">
-                  </input>
-    </div> -->
-
     <div class="col-md-12">
       <label for="subtitle" class="form-label mt-3">Subtitle</label>
       <input type="text" class="form-control" name="subtitle"
@@ -58,7 +49,7 @@
   <div class="col-md-12">
     <form
         method="POST"
-        action="{{ url_for('auth.delete', blogpost_id=blogpost.id) }}"
+        action="{{ url_for('delete', blogpost_id=blogpost.id) }}"
       >
       <input class="btn btn-outline-danger" type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this post?')"
       />
