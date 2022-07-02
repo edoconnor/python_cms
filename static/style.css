@@ -66,6 +66,10 @@ p.card-body-text {
   margin-top: -0.5rem;
 }
 
+/* .img-fluid {
+  max-width: 100vw;
+} */
+
 .form-control {
   color: red;
 }
