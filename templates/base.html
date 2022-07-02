@@ -26,52 +26,34 @@
     />
     <title>{% block title %} {% endblock %}</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <!-- <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
+     <nav class="navbar navbar-light" style="background-color: #95a5a6;">
 
-      <a class="navbar-brand" href="{{ url_for('index') }}">RANDOM THINGS</a>
-      <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
+        <a class="navbar-brand" href="{{ url_for('index') }}">RANDOM THINGS</a>
+      
+        <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
 
-      {% if current_user.is_authenticated %}
+    {% if current_user.is_authenticated %}
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('create') }}">Create Post</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('create') }}">Create Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+  </nav>
     {% block content %} {% endblock %}
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

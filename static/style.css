@@ -9,12 +9,18 @@ body {
   color: #2d3436;
 }
 
-h1 {
-  margin-left: 1.25rem;
+body > nav > a:nth-child(1) {
+  margin-left: 2rem;
 }
 
 h3 {
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 }
 
 a.navbar-brand {
@@ -64,10 +70,6 @@ p.card-body-text {
 
 #img-max {
   margin-top: -0.5rem;
-}
-
-.img-fluid {
-  min-width: 100vwh;
 }
 
 .form-control {
