@@ -66,9 +66,9 @@ p.card-body-text {
   margin-top: -0.5rem;
 }
 
-/* .img-fluid {
-  max-width: 100vw;
-} */
+.img-fluid {
+  min-width: 100vwh;
+}
 
 .form-control {
   color: red;
