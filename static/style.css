@@ -26,20 +26,20 @@ h3 {
 }
 
 nav {
-  background-color: #bdc3c7;
+  background-color: #ecf0f1;
 }
 
 .navbar-title {
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
   text-decoration: none;
-  color: #2c3e50;
+  color: #e74c3c;
   letter-spacing: 0.25rem;
 }
 
 @media (max-width: 25em) {
   .navbar-title {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 
