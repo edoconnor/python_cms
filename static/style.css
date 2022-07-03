@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
   line-height: 1.25;
   font-weight: 400;
   color: #2d3436;
@@ -30,7 +30,7 @@ nav {
 }
 
 .navbar-title {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 3rem;
   text-decoration: none;
   color: #e74c3c;
@@ -38,13 +38,22 @@ nav {
 }
 
 @media (max-width: 25em) {
-  .navbar-title {
-    font-size: 0.75rem;
+  a.navbar-title {
+    font-size: 1rem;
+  }
+  a.index-card-title {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 34em) {
-  .index-card-title {
+@media (max-width: 28.9em) {
+  a.navbar-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 38.25em) {
+  a.index-card-title {
     font-size: 2rem;
   }
   .index-card-text {
@@ -76,6 +85,10 @@ nav {
   }
 }
 
+h5.index-card-title {
+  margin-top: 10px;
+}
+
 .navbar-nav,
 .admin-navbar-nav {
   display: flex;
@@ -101,10 +114,6 @@ li.nav-item {
 
 .index-card-body {
   margin-bottom: -0.75rem;
-}
-
-.index-card-title {
-  margin-top: 0.5rem;
 }
 
 .index-card:hover {
