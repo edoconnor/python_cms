@@ -16,10 +16,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       type="text/css"
@@ -35,7 +34,7 @@
           <a class="navbar-title" href="{{ url_for('index') }}">RANDOM THINGS</a>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
+          <a class="navbar-title" href="{{ url_for('login') }}">+</a>
         </li>
       </ul>
   
@@ -46,7 +45,7 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-0 pr-2 mt-lg-0">
+      <ul class="admin-navbar-nav justify-content-center">
         
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('create') }}">Create Post</a>

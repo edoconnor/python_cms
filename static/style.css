@@ -21,10 +21,6 @@ body {
   font-style: italic;
 }
 
-body > nav > a:nth-child(1) {
-  margin-left: 3rem;
-}
-
 h3 {
   font-weight: bold;
 }
@@ -33,10 +29,15 @@ nav {
   background-color: #bdc3c7;
 }
 
+.navbar-title {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  text-decoration: none;
+  color: inherit;
+  letter-spacing: 0.25rem;
+}
+
 @media (max-width: 34em) {
-  nav {
-    height: 4rem;
-  }
   .index-card-title {
     font-size: 1.5rem;
   }
@@ -46,8 +47,8 @@ nav {
   img.img-fluid {
     width: 100%;
   }
-  a.navbar-brand {
-    font-size: 3rem;
+  .navbar-title {
+    font-size: 2rem;
   }
   .blog-post-card {
     width: 100%;
@@ -69,21 +70,17 @@ nav {
   }
 }
 
-.navbar-nav {
+.navbar-nav,
+.admin-navbar-nav {
   display: flex;
   flex-direction: row;
 }
-a.navbar-brand {
-  font-size: 1.5rem;
-  word-spacing: 0.25rem;
-  letter-spacing: 0.3rem;
-}
 
-.navbar-title {
-  font-size: 2rem;
+.admin-navbar-nav {
+  display: flex;
+  flex-direction: row;
   text-decoration: none;
-  color: inherit;
-  letter-spacing: 0.25rem;
+  list-style: none;
 }
 
 li.nav-item {
