@@ -33,7 +33,7 @@ nav {
   background-color: #bdc3c7;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 34em) {
   nav {
     height: 5rem;
     background-color: #2980b9;
