@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container mt-5" id="post-container">
   <div class="d-flex justify-content-center">
-    <div class="blog-post-card border-0" style="max-width: 800px">
-      <h3>{{ blogpost.title }}</h3>
-      <h5>{{ blogpost.subtitle }}</h5>
+    <div class="blog-post-card">
+      <h3 class="blogpost-title">{{ blogpost.title }}</h3>
+      <h5 class="blogpost-subtitle">{{ blogpost.subtitle }}</h5>
       <br />
       <img
         class="img-fluid"
@@ -12,7 +12,7 @@
         id="img-max"
       />
       <br />
-      <p class="card-body-text">{{ blogpost.content }}</p>
+      <p class="blogpost-card-body-text">{{ blogpost.content }}</p>
       <p class="card-byline text-muted font-italic">
         Posted by {{ blogpost.author }} on {{ blogpost.date_posted.strftime('%B
         %d, %Y') }}

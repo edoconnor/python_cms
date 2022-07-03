@@ -15,7 +15,7 @@
               {{ blogpost.title }}
             </a>
           </h5>
-          <p>{{ blogpost.content | truncate(200) }}</p>
+          <p class="index-card-text">{{ blogpost.content | truncate(200) }}</p>
           <p class="index-byline">
             Posted by {{ blogpost.author }} on {{
             blogpost.date_posted.strftime('%B %d, %Y') }}
