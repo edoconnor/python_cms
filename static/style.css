@@ -35,14 +35,13 @@ nav {
 
 @media (max-width: 34em) {
   nav {
-    height: 5rem;
-    background-color: #2980b9;
+    height: 4rem;
   }
   .index-card-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .index-card-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   img.img-fluid {
     width: 100%;
