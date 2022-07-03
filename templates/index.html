@@ -3,20 +3,23 @@
   <div class="row">
     {% for blogpost in blogposts %}
     <div class="col-12 col-lg-4">
-      <!-- <div class="index-column"> -->
-      <div class="card mt-2">
+      <div class="index-card mt-2">
         <img
           class="img-fluid"
           src="{{ blogpost.image }}"
           alt="Responsive image"
         />
-        <div class="card-body">
-          <h5 class="card-title">
+        <div class="index-card-body">
+          <h5 class="index-card-title">
             <a href="{{ url_for('blogpost', blogpost_id=blogpost.id)}}">
               {{ blogpost.title }}
             </a>
           </h5>
           <p>{{ blogpost.content | truncate(200) }}</p>
+          <p class="index-byline">
+            Posted by {{ blogpost.author }} on {{
+            blogpost.date_posted.strftime('%B %d, %Y') }}
+          </p>
         </div>
       </div>
     </div>

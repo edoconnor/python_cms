@@ -4,13 +4,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Lato", sans-serif;
+  line-height: 1.25;
+  font-weight: 400;
   color: #2d3436;
 }
 
+.index-byline {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
 body > nav > a:nth-child(1) {
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 h3 {
@@ -21,22 +33,44 @@ h3 {
   .navbar-brand {
     font-size: 1.5rem;
   }
+  .blog-post-card {
+    width: 100%;
+  }
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
 a.navbar-brand {
+  font-size: 1.5rem;
+  word-spacing: 0.25rem;
   letter-spacing: 0.3rem;
 }
 
-.card {
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
+li.nav-item {
+  padding-right: 0.75rem;
 }
 
-.card:hover {
+.index-card {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.index-card-body {
+  margin-bottom: -0.75rem;
+}
+
+.index-card-title {
+  margin-top: 0.5rem;
+}
+
+.index-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-p.card-body-text {
+p.index-card-body-text {
   padding-top: 15px;
 }
 

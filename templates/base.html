@@ -28,10 +28,16 @@
   </head>
      <nav class="navbar navbar-light" style="background-color: #95a5a6;">
 
-        <a class="navbar-brand" href="{{ url_for('index') }}">RANDOM THINGS</a>
-      
-        <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
 
+      <ul class="navbar-nav mx-auto order-0 ">
+        <li class="nav-item">
+          <a class="navbar-brand" href="{{ url_for('index') }}">RANDOM THINGS</a>
+        </li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="{{ url_for('login') }}">🚀</a>
+        </li>
+      </ul>
+  
     {% if current_user.is_authenticated %}
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +45,7 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <ul class="navbar-nav mr-auto mt-0 pr-2 mt-lg-0">
         
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('create') }}">Create Post</a>
