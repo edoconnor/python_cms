@@ -29,9 +29,14 @@ h3 {
   font-weight: bold;
 }
 
+nav {
+  background-color: #bdc3c7;
+}
+
 @media (max-width: 800px) {
   nav {
     height: 5rem;
+    background-color: #2980b9;
   }
   .index-card-title {
     font-size: 2rem;
