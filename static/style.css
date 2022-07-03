@@ -26,20 +26,26 @@ h3 {
 }
 
 nav {
-  background-color: #bdc3c7;
+  background-color: #1e272e;
 }
 
 .navbar-title {
   font-family: "Permanent Marker", cursive;
   font-size: 3rem;
   text-decoration: none;
-  color: inherit;
+  color: #d2dae2;
   letter-spacing: 0.25rem;
+}
+
+@media (max-width: 25em) {
+  .navbar-title {
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 34em) {
   .index-card-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .index-card-text {
     font-size: 1rem;
