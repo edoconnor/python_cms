@@ -44,6 +44,9 @@ nav {
   a.index-card-title {
     font-size: 1.5rem;
   }
+  .blogpost-card-body-text {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 28.9em) {
@@ -158,4 +161,8 @@ p.index-card-body-text {
 
 .form-control {
   color: red;
+}
+
+.blogpost-card-body-text {
+  margin-top: 10px;
 }
