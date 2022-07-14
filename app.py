@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import func
 from dotenv import load_dotenv
+import psycopg2
 import os
 
 load_dotenv()
