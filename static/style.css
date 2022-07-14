@@ -25,16 +25,25 @@ h3 {
   font-weight: bold;
 }
 
-nav {
-  background-color: #ecf0f1;
-}
-
 .navbar-title {
   font-family: "Ubuntu Mono", monospace;
   font-size: 3rem;
-  text-decoration: none;
   color: #e74c3c;
+  text-decoration: none;
   letter-spacing: 0.25rem;
+}
+
+.form-container {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.edit-page-title {
+  margin-left: 0.25rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 25em) {
@@ -44,8 +53,8 @@ nav {
   a.index-card-title {
     font-size: 1.5rem;
   }
-  .blogpost-card-body-text {
-    font-size: 0.8rem;
+  p.blogpost-card-body-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -69,6 +78,7 @@ nav {
     font-size: 2rem;
   }
   .blog-post-card {
+    max-width: 600px;
     width: 100%;
   }
   .blogpost-title {
@@ -84,7 +94,7 @@ nav {
 
 @media (min-width: 800px) {
   .blog-post-card {
-    width: 800px;
+    width: 600px;
   }
 }
 
@@ -123,8 +133,19 @@ li.nav-item {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-p.index-card-body-text {
-  padding-top: 15px;
+p.index-card-text {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+h5.index-card-title {
+  width: 100;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 .field {

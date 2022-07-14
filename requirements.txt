@@ -5,4 +5,4 @@ python-dotenv==0.20.0
 SQLAlchemy==1.4.36
 Werkzeug==2.1.2
 gunicorn==20.1.0
-psycopg2==2.9.3
+ 
