@@ -1,5 +1,4 @@
-# python_cms
+# Python Flask CMS Platform
+![Python Flask CMS Platform screenshot](screenshot.png)
 
-Responsive Python CMS with Admin Login. 
-
-
+View deployed app: [https://random-things-blog.herokuapp.com/](https://random-things-blog.herokuapp.com/).
